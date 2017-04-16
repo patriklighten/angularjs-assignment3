@@ -26,9 +26,10 @@ NarrowItDownController.$inject = ['MenuSearchService'];
 function NarrowItDownController(MenuSearchService) {
   var list = this;
   list.found=[]; 
-  list.NarrowItDown= function()
+  list.searchTerm="";
+  list.NarrowItDown= function(searchTerm)
   {
-    list.found=MenuSearchService.getMatchedMenuItems();
+    list.found=MenuSearchService.getMatchedMenuItems(searchTerm);
   }
   
 
@@ -62,8 +63,9 @@ service.getMatchedMenuItems = function (searchTerm) {
           foundItems.push(allItems[i]);
         }
       }
-
-      return foundItems;
+      
+      //return foundItems;
+      return allItems;
     }
     
     
