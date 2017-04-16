@@ -1,0 +1,7 @@
+<ol>
+  <li ng-repeat="item in menulist.foundItems">
+    {{ item.quantity }} of {{ item.name }}
+    <button ng-click="menulist.onRemove({index: $index});">Remove Item</button>
+  </li>
+</ol>
+
