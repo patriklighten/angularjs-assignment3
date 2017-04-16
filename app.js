@@ -23,7 +23,7 @@ function foundItems() {
 
 
 NarrowItDownController.$inject = ['MenuSearchService'];
-function ShoppingListController(ShoppingListFactory) {
+function NarrowItDownController(MenuSearchService) {
   var list = this;
   list.found=[]; 
   list.NarrowItDown= function()
